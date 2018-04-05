@@ -1,0 +1,29 @@
+{
+  "name": "egg-cooked",
+  "version": "0.1.0",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "egg": "^2.6.0",
+    "egg-cors": "^2.0.0",
+    "egg-passport": "^2.0.1",
+    "egg-redis": "^2.0.0",
+    "egg-sequelize": "^3.1.2",
+    "egg-validate": "^1.0.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.0",
+    "mysql2": "^1.5.3",
+    "socket.io": "^2.1.0",
+    "socket.io-redis": "^5.2.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.6.2",
+    "egg-mock": "^3.17.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "test": "egg-bin test"
+  }
+}
