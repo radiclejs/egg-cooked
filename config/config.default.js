@@ -6,7 +6,7 @@
 module.exports = appInfo => {
 
   const config = {
-    // port: 3000,
+    port: 3000,
     keys: '123456789qwe',
     // api路由的前缀
     API_PATH_HEAD: '/api',

@@ -1,0 +1,16 @@
+'use strict';
+
+const assert = require('assert');
+const egg = require('..');
+
+describe('test/index.test.js', () => {
+  it('should expose properties', () => {
+    assert.deepEqual(Object.keys(egg).sort(), [
+      'AppWorkerLoader',
+      'Application',
+      'BaseContextClass',
+      'Controller',
+      'Service'
+    ]);
+  });
+});

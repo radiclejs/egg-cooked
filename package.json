@@ -17,6 +17,7 @@
     "socket.io-redis": "^5.2.0"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "egg-bin": "^4.6.2",
     "egg-mock": "^3.17.0"
   },
@@ -24,6 +25,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
+    "dev": "cross-env EGG_SERVER_ENV=local nodemon ./app_setup.js",
     "test": "egg-bin test"
   }
 }

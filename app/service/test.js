@@ -1,6 +1,6 @@
 'use strict';
 
-const Service = require('egg').Service;
+const Service = require('../../framework').Service;
 
 /**
  * Test Service
