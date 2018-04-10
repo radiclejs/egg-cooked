@@ -4,28 +4,28 @@ module.exports = {
   success(data) {
     const { RESULT_CODE } = this.app;
     this.body = {
-      ret: RESULT_CODE.SUCCESS,
+      ret: RESULT_CODE.SUCCESS.code,
       data,
       msg: ''
     };
   },
 
-  error(code, msg) {
+  error(key, msg) {
     const { RESULT_CODE } = this.app;
     this.body = {
-      ret: code,
+      ret: RESULT_CODE[key].code,
       data: null,
-      msg: msg || RESULT_CODE[code]
+      msg: msg || RESULT_CODE[key].msg
     }
   },
 
   done(obj) {
     obj = obj || {}
     const { RESULT_CODE } = this.app;
-    if (obj.code === RESULT_CODE.SUCCESS) {
+    if (obj.key === 'SUCCESS') {
       this.success(obj.data)
     } else {
-      this.error(obj.code, obj.msg)
+      this.error(obj.key, obj.msg)
     }
   }
 };
