@@ -21,7 +21,11 @@ module.exports = {
 
   done(obj) {
     obj = obj || {}
-    const { RESULT_CODE } = this.app;
+
+    if (!obj.code && !obj.msg) {
+      return this.success(obj)
+    }
+
     if (obj.key === 'SUCCESS') {
       this.success(obj.data)
     } else {
